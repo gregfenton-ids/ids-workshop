@@ -20,7 +20,7 @@
     "test:web": "nx test client-web",
     "test:apis": "nx test astra-apis",
     "test:delta": "nx affected -t test",
-    "typecheck": "tsc -p libs/shared/data-models/tsconfig.lib.json --noEmit && tsc -p libs/shared/testing-helpers/tsconfig.lib.json --noEmit && tsc -p apps/astra-apis/tsconfig.app.json --noEmit && tsc -p apps/client-web/tsconfig.app.json --noEmit",
+    "typecheck": "tsc --build libs/shared/data-models/tsconfig.lib.json && tsc -p libs/shared/data-models/tsconfig.lib.json --noEmit && tsc -p libs/shared/testing-helpers/tsconfig.lib.json --noEmit && tsc -p apps/astra-apis/tsconfig.app.json --noEmit && tsc -p apps/client-web/tsconfig.app.json --noEmit",
     "typecheck:apis": "tsc --project apps/astra-apis/tsconfig.app.json --noEmit",
     "typecheck:web": "tsc --project apps/client-web/tsconfig.app.json --noEmit",
     "lint": "biome check --write .",

@@ -12,9 +12,7 @@ export default [
       index('./app.tsx'),
 
       // Parts
-      ...prefix('parts', [
-        index('./pages/parts/PartList.tsx'),
-      ]),
+      ...prefix('parts', [index('./pages/parts/PartList.tsx')]),
 
       // Admin
       route('locations', './pages/locations/LocationList.tsx'),

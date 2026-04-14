@@ -15,12 +15,10 @@ import {
   OnModuleInit,
 } from '@nestjs/common';
 import type {IDocumentQuery, QueryStatistics} from 'ravendb';
-import {Bin} from '../bin/entities/bin.entity';
 import {createIdsBaseEntity, touchIdsBaseEntity} from '../common/entities/ids-base.entity';
 import {RavenDocumentStoreProvider} from '../infrastructure/ravendb/document-store.provider';
 import {RavenSessionFactory} from '../infrastructure/ravendb/session-factory';
 import {Location} from '../location/entities/location.entity';
-import {Vendor} from '../vendor/entities/vendor.entity';
 import type {PartCreateDto, PartCreateResponseDto} from './dto/part-create.dto';
 import type {PartDetailResponseDto} from './dto/part-detail.dto';
 import type {PartWithInventoryResponseDto} from './dto/part-list.query.dto';
@@ -42,6 +40,9 @@ import {
   toPartUpdateResponseDto,
   toPartWithInventoryResponseDtoList,
 } from './part.mapper';
+
+type Vendor = {id: string; vendorNumber: string; name: string};
+type Bin = {id: string; binNumber: string; description: string};
 
 @Injectable()
 export class PartService implements OnModuleInit {
