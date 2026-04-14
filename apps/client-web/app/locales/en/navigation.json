@@ -1,0 +1,54 @@
+{
+  "adminSettings": "Admin & Settings",
+  "home": "Home",
+  "integrations": "Integrations",
+  "integrationsSubtitle": "API keys for 3rd party tools",
+  "inventory": "Inventory",
+  "locations": "Locations",
+  "locationsSubtitle": "Stores",
+  "partsInventory": "Parts Inventory",
+  "partsInventorySubtitle": "SKUs, Bins, Supersessions",
+  "signOut": "Sign Out",
+  "signOutButton": "Yes, Sign Out",
+  "signOutConfirm": "Are you sure you want to sign out?",
+  "systemConfig": "System Config",
+  "systemConfigSubtitle": "Tax rates, labor rates, rental terms",
+  "users": "Users",
+  "usersSubtitle": "Roles and Permissions",
+  "userSettings": "User Settings",
+  "categories": {
+    "inventory": "Inventory",
+    "admin": "Admin & Settings"
+  },
+  "features": {
+    "partsInventory": {
+      "name": "Parts Inventory",
+      "description": "Track parts, quantities, bins, and reorder points"
+    },
+    "locations": {
+      "name": "Locations",
+      "description": "Manage dealership locations and configuration"
+    },
+    "users": {
+      "name": "Users",
+      "description": "Manage user accounts, roles, and permissions"
+    },
+    "systemConfig": {
+      "name": "System Config",
+      "description": "Global system settings and feature toggles"
+    },
+    "integrations": {
+      "name": "Integrations",
+      "description": "Configure third-party integrations and API connections"
+    },
+    "workOrder": {
+      "name": "Work Orders",
+      "description": "Manage service work orders"
+    }
+  },
+  "status": {
+    "complete": "Complete",
+    "inProgress": "In Progress",
+    "notStarted": "Not Started"
+  }
+}

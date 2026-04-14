@@ -1,0 +1,42 @@
+{
+  "home": "Accueil",
+  "userSettings": "Paramètres Utilisateur",
+  "signOut": "Se Déconnecter",
+  "signOutConfirm": "Êtes-vous sûr de vouloir vous déconnecter ?",
+  "signOutButton": "Oui, Se Déconnecter",
+  "categories": {
+    "inventory": "Inventory",
+    "admin": "Admin & Settings"
+  },
+  "features": {
+    "partsInventory": {
+      "name": "Parts Inventory",
+      "description": "Track parts, quantities, bins, and reorder points"
+    },
+    "locations": {
+      "name": "Locations",
+      "description": "Manage dealership locations and configuration"
+    },
+    "users": {
+      "name": "Users",
+      "description": "Manage user accounts, roles, and permissions"
+    },
+    "systemConfig": {
+      "name": "System Config",
+      "description": "Global system settings and feature toggles"
+    },
+    "integrations": {
+      "name": "Integrations",
+      "description": "Configure third-party integrations and API connections"
+    },
+    "workOrder": {
+      "name": "Work Orders",
+      "description": "Manage service work orders for units and repairs"
+    }
+  },
+  "status": {
+    "complete": "Complete",
+    "inProgress": "In Progress",
+    "notStarted": "Not Started"
+  }
+}

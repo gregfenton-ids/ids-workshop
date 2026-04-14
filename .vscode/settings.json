@@ -1,0 +1,45 @@
+{
+  "turboConsoleLog.quote": "'",
+  "turboConsoleLog.dynamicFreemiumPanel": false,
+  "turboConsoleLog.includeFilename": true,
+  "turboConsoleLog.includeLineNum": true,
+  "turboConsoleLog.isTurboTelemetryEnabled": false,
+  "turboConsoleLog.addSemicolonInTheEnd": true,
+  "scm.repositories.explorer": true,
+  "scm.repositories.selectionMode": "single",
+  "sqltools.connections": [
+    {
+      "ssh": "Disabled",
+      "previewLimit": 50,
+      "server": "localhost",
+      "port": 5432,
+      "driver": "PostgreSQL",
+      "name": "logto_db",
+      "database": "logto_db",
+      "username": "postgres",
+      "password": "devpassword"
+    }
+  ],
+  // Biome auto-format and lint on save
+  "editor.formatOnSave": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.biome": "explicit",
+    "source.organizeImports.biome": "explicit"
+  },
+  "editor.defaultFormatter": "biomejs.biome",
+  "[typescript]": {
+    "editor.defaultFormatter": "biomejs.biome"
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "biomejs.biome"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "biomejs.biome"
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "biomejs.biome"
+  },
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "vscode.typescript-language-features"
+  }
+}

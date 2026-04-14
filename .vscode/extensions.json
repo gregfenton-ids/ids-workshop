@@ -1,0 +1,15 @@
+{
+  "recommendations": [
+    "bierner.markdown-mermaid",
+    "biomejs.biome",
+    "chakrounanas.turbo-console-log",
+    "eamodio.gitlens",
+    "firsttris.vscode-jest-runner",
+    "github.vscode-github-actions",
+    "mhutchie.git-graph",
+    "ms-playwright.playwright",
+    "mtxr.sqltools-driver-pg",
+    "nrwl.angular-console",
+    "sdras.night-owl"
+  ]
+}
