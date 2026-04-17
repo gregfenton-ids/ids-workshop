@@ -129,29 +129,34 @@ export function ErrorBoundary() {
     detail = error.message;
   }
 
+  const theme = createAppTheme('light');
+
   return (
-    <Box
-      sx={{
-        display: 'flex',
-        flexDirection: 'column',
-        alignItems: 'center',
-        justifyContent: 'center',
-        minHeight: '100vh',
-        p: 4,
-        textAlign: 'center',
-      }}
-    >
-      <ErrorOutlineIcon sx={{fontSize: 64, color: 'error.main', mb: 2}} />
-      <Typography variant="h5" gutterBottom>
-        {title}
-      </Typography>
-      <Typography variant="body1" color="text.secondary" sx={{mb: 3, maxWidth: 480}}>
-        {detail}
-      </Typography>
-      <Button variant="contained" onClick={() => window.location.reload()}>
-        Reload
-      </Button>
-    </Box>
+    <ThemeProvider theme={theme}>
+      <CssBaseline />
+      <Box
+        sx={{
+          display: 'flex',
+          flexDirection: 'column',
+          alignItems: 'center',
+          justifyContent: 'center',
+          minHeight: '100vh',
+          p: 4,
+          textAlign: 'center',
+        }}
+      >
+        <ErrorOutlineIcon sx={{fontSize: 64, color: 'error.main', mb: 2}} />
+        <Typography variant="h5" gutterBottom>
+          {title}
+        </Typography>
+        <Typography variant="body1" color="text.secondary" sx={{mb: 3, maxWidth: 480}}>
+          {detail}
+        </Typography>
+        <Button variant="contained" onClick={() => window.location.reload()}>
+          Reload
+        </Button>
+      </Box>
+    </ThemeProvider>
   );
 }
 

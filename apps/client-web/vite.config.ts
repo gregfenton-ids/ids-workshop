@@ -82,6 +82,13 @@ export default defineConfig(() => ({
   },
   optimizeDeps: {
     exclude: ['@nestjs/mapped-types'],
+    include: [
+      '@emotion/react',
+      '@emotion/styled',
+      '@mui/material',
+      '@mui/system',
+      '@mui/icons-material',
+    ],
   },
   build: {
     outDir: './dist',

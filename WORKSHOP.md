@@ -2,25 +2,35 @@
 
 ## Prerequisites
 
-- Node.js 20+
+- Node.js 20+ (install it using Node Version Manager (`nvm` or `nvm-windows`))
 - Docker Desktop (running)
-- npm 10+
 
 ## Setup
 
+**Terminal 1** — run once to initialise everything:
 ```bash
 npm install
-npm run docker -- up        # starts Logto, PostgreSQL, RavenDB, Mailpit
-npm run logto -- seed       # seeds test users & Logto config
-npm run db -- init          # creates RavenDB database + reference data
-npm run dev:start           # starts API (port 3000) + Web UI (port 5173)
+npm run docker -- up                    # start Logto, PostgreSQL, RavenDB, Mailpit
+npm run logto -- logto:db:import-init   # load Logto config (stops/restarts Logto automatically)
+npm run logto -- logto:seed             # seed test users & organisations
+```
+
+**Terminal 2** — start the dev servers and leave them running:
+```bash
+npm run dev:apis                       # start API (port 3000)
+```
+
+**Terminal 1** — once the API is ready (you'll see `Application is running on: http://localhost:3000`):
+```bash
+npm run db -- seed                      # create RavenDB database + seed reference data
+npm run dev:web                         # start Web UI (port 3004)
 ```
 
 ## Login
 
 | | |
 |---|---|
-| URL | http://localhost:5173 |
+| URL | http://localhost:3004 |
 | Email | alice@acme-rv.com |
 | Password | xyab12dE |
 
@@ -28,7 +38,7 @@ npm run dev:start           # starts API (port 3000) + Web UI (port 5173)
 
 | Service | URL |
 |---|---|
-| Web UI | http://localhost:5173 |
+| Web UI | http://localhost:3004 |
 | API | http://localhost:3000 |
 | Logto Admin | http://localhost:3002 |
 | RavenDB Studio | http://localhost:3333 |
