@@ -1,19 +1,59 @@
 import {useLogto} from '@logto/react';
+import AccountBalanceIcon from '@mui/icons-material/AccountBalance';
+import AccountBalanceWalletIcon from '@mui/icons-material/AccountBalanceWallet';
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import AddLocationAltIcon from '@mui/icons-material/AddLocationAlt';
+import AddModeratorIcon from '@mui/icons-material/AddModerator';
+import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
+import AssessmentIcon from '@mui/icons-material/Assessment';
+import AssignmentReturnIcon from '@mui/icons-material/AssignmentReturn';
+import AttachMoneyIcon from '@mui/icons-material/AttachMoney';
+import BadgeIcon from '@mui/icons-material/Badge';
+import BuildIcon from '@mui/icons-material/Build';
+import BuildCircleIcon from '@mui/icons-material/BuildCircle';
+import BusAlertIcon from '@mui/icons-material/BusAlert';
 import BusinessIcon from '@mui/icons-material/Business';
+import CalculateIcon from '@mui/icons-material/Calculate';
+import CalendarViewMonthIcon from '@mui/icons-material/CalendarViewMonth';
+import CarRepairIcon from '@mui/icons-material/CarRepair';
 import ChecklistIcon from '@mui/icons-material/Checklist';
 import CodeIcon from '@mui/icons-material/Code';
+import ConnectWithoutContactIcon from '@mui/icons-material/ConnectWithoutContact';
 import DarkModeIcon from '@mui/icons-material/DarkMode';
+import DirectionsCarIcon from '@mui/icons-material/DirectionsCar';
+import EditCalendarIcon from '@mui/icons-material/EditCalendar';
+import EngineeringIcon from '@mui/icons-material/Engineering';
+import EventAvailableIcon from '@mui/icons-material/EventAvailable';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+import HandshakeIcon from '@mui/icons-material/Handshake';
 import HomeIcon from '@mui/icons-material/Home';
 import InventoryIcon from '@mui/icons-material/Inventory';
 import LightModeIcon from '@mui/icons-material/LightMode';
+import LocalShippingIcon from '@mui/icons-material/LocalShipping';
+import LoginIcon from '@mui/icons-material/Login';
+import LogoutIcon from '@mui/icons-material/Logout';
 import MenuIcon from '@mui/icons-material/Menu';
+import MenuBookIcon from '@mui/icons-material/MenuBook';
 import MenuOpenIcon from '@mui/icons-material/MenuOpen';
+import PaymentsIcon from '@mui/icons-material/Payments';
+import PeopleIcon from '@mui/icons-material/People';
+import PointOfSaleIcon from '@mui/icons-material/PointOfSale';
 import PowerSettingsNewIcon from '@mui/icons-material/PowerSettingsNew';
+import PriceChangeIcon from '@mui/icons-material/PriceChange';
+import QueryStatsIcon from '@mui/icons-material/QueryStats';
+import ReceiptIcon from '@mui/icons-material/Receipt';
+import RequestQuoteIcon from '@mui/icons-material/RequestQuote';
+import RvHookupIcon from '@mui/icons-material/RvHookup';
 import SettingsIcon from '@mui/icons-material/Settings';
+import ShelvesIcon from '@mui/icons-material/Shelves';
+import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
+import ShoppingCartCheckoutIcon from '@mui/icons-material/ShoppingCartCheckout';
+import ShowChartIcon from '@mui/icons-material/ShowChart';
+import SummarizeIcon from '@mui/icons-material/Summarize';
+import SyncIcon from '@mui/icons-material/Sync';
+import TaskIcon from '@mui/icons-material/Task';
 import ToggleOnIcon from '@mui/icons-material/ToggleOn';
+import TrendingUpIcon from '@mui/icons-material/TrendingUp';
 import Accordion from '@mui/material/Accordion';
 import AccordionDetails from '@mui/material/AccordionDetails';
 import AccordionSummary from '@mui/material/AccordionSummary';
@@ -46,6 +86,7 @@ import {type ReactNode, useEffect, useState} from 'react';
 import {useTranslation} from 'react-i18next';
 import {Link, Outlet, useNavigate, useLocation as useRouterLocation} from 'react-router';
 import {useColorMode} from '../contexts/ColorModeContext';
+import RentHangingSignIcon from '../icons/RentHangingSignIcon';
 import {ComingSoonDialog} from './ComingSoonDialog';
 import {IdsLogoImage} from './IdsLogoImage';
 import {LanguageSwitcher} from './LanguageSwitcher';
@@ -226,6 +267,259 @@ export function Layout() {
           featureId: 'parts-inventory',
           route: '/parts',
         },
+        {
+          label: t('navigation:unitInventory'),
+          icon: <RvHookupIcon color="inherit" />,
+          featureId: 'unit-inventory',
+          route: null,
+        },
+        {
+          label: t('navigation:ordering'),
+          icon: <ShoppingCartCheckoutIcon color="inherit" />,
+          featureId: 'ordering',
+          route: null,
+        },
+        {
+          label: t('navigation:receiving'),
+          icon: <LocalShippingIcon color="inherit" />,
+          featureId: 'receiving',
+          route: null,
+        },
+        {
+          label: t('navigation:stockAdjustments'),
+          icon: <ShelvesIcon color="inherit" />,
+          featureId: 'stock-adjustments',
+          route: null,
+        },
+      ],
+    },
+    {
+      key: 'service',
+      label: t('navigation:service'),
+      icon: <BuildIcon />,
+      items: [
+        {
+          label: t('navigation:scheduler'),
+          icon: <EditCalendarIcon color="inherit" />,
+          featureId: 'scheduler',
+          route: null,
+        },
+        {
+          label: t('navigation:workOrders'),
+          icon: <CarRepairIcon color="inherit" />,
+          featureId: 'work-orders',
+          route: null,
+        },
+        {
+          label: t('navigation:techDispatch'),
+          icon: <BusAlertIcon color="inherit" />,
+          featureId: 'tech-dispatch',
+          route: null,
+        },
+        {
+          label: t('navigation:warrantycentral'),
+          icon: <AddModeratorIcon color="inherit" />,
+          featureId: 'warranty-central',
+          route: null,
+        },
+      ],
+    },
+    {
+      key: 'partsCounter',
+      label: t('navigation:partsCounter'),
+      icon: <PointOfSaleIcon />,
+      items: [
+        {
+          label: t('navigation:counterSales'),
+          icon: <AddShoppingCartIcon color="inherit" />,
+          featureId: 'counter-sales',
+          route: null,
+        },
+        {
+          label: t('navigation:serviceCounter'),
+          icon: <EngineeringIcon color="inherit" />,
+          featureId: 'service-counter',
+          route: null,
+        },
+        {
+          label: t('navigation:returnsCores'),
+          icon: <AssignmentReturnIcon color="inherit" />,
+          featureId: 'returns-cores',
+          route: null,
+        },
+      ],
+    },
+    {
+      key: 'salesFI',
+      label: t('navigation:salesFI'),
+      icon: <ShoppingCartIcon />,
+      items: [
+        {
+          label: t('navigation:quoteManager'),
+          icon: <RequestQuoteIcon color="inherit" />,
+          featureId: 'quote-manager',
+          route: null,
+        },
+        {
+          label: t('navigation:dealDesk'),
+          icon: <CalculateIcon color="inherit" />,
+          featureId: 'deal-desk',
+          route: null,
+        },
+        {
+          label: t('navigation:fiManager'),
+          icon: <AccountBalanceWalletIcon color="inherit" />,
+          featureId: 'fi-manager',
+          route: null,
+        },
+        {
+          label: t('navigation:deliveryScheduler'),
+          icon: <EventAvailableIcon color="inherit" />,
+          featureId: 'delivery-scheduler',
+          route: null,
+        },
+        {
+          label: t('navigation:consignments'),
+          icon: <HandshakeIcon color="inherit" />,
+          featureId: 'consignments',
+          route: null,
+        },
+      ],
+    },
+    {
+      key: 'rentals',
+      label: t('navigation:rentals'),
+      icon: <RentHangingSignIcon />,
+      items: [
+        {
+          label: t('navigation:reservationBoard'),
+          icon: <CalendarViewMonthIcon color="inherit" />,
+          featureId: 'reservation-board',
+          route: null,
+        },
+        {
+          label: t('navigation:checkOut'),
+          icon: <LogoutIcon color="inherit" />,
+          featureId: 'check-out',
+          route: null,
+        },
+        {
+          label: t('navigation:checkIn'),
+          icon: <LoginIcon color="inherit" />,
+          featureId: 'check-in',
+          route: null,
+        },
+        {
+          label: t('navigation:fleetStatus'),
+          icon: <DirectionsCarIcon color="inherit" />,
+          featureId: 'fleet-status',
+          route: null,
+        },
+        {
+          label: t('navigation:rateManagement'),
+          icon: <PriceChangeIcon color="inherit" />,
+          featureId: 'rate-management',
+          route: null,
+        },
+      ],
+    },
+    {
+      key: 'crm',
+      label: t('navigation:crm'),
+      icon: <PeopleIcon />,
+      items: [
+        {
+          label: t('navigation:customers'),
+          icon: <PeopleIcon color="inherit" />,
+          featureId: 'customers',
+          route: null,
+        },
+        {
+          label: t('navigation:salesLeads'),
+          icon: <QueryStatsIcon color="inherit" />,
+          featureId: 'sales-leads',
+          route: null,
+        },
+        {
+          label: t('navigation:communication'),
+          icon: <ConnectWithoutContactIcon color="inherit" />,
+          featureId: 'communication',
+          route: null,
+        },
+        {
+          label: t('navigation:tasks'),
+          icon: <TaskIcon color="inherit" />,
+          featureId: 'tasks',
+          route: null,
+        },
+      ],
+    },
+    {
+      key: 'accounting',
+      label: t('navigation:accounting'),
+      icon: <AttachMoneyIcon />,
+      items: [
+        {
+          label: t('navigation:generalLedger'),
+          icon: <MenuBookIcon color="inherit" />,
+          featureId: 'general-ledger',
+          route: null,
+        },
+        {
+          label: t('navigation:accountsPayable'),
+          icon: <PaymentsIcon color="inherit" />,
+          featureId: 'accounts-payable',
+          route: null,
+        },
+        {
+          label: t('navigation:accountsReceivable'),
+          icon: <ReceiptIcon color="inherit" />,
+          featureId: 'accounts-receivable',
+          route: null,
+        },
+        {
+          label: t('navigation:cashiering'),
+          icon: <AccountBalanceIcon color="inherit" />,
+          featureId: 'cashiering',
+          route: null,
+        },
+        {
+          label: t('navigation:integrationSync'),
+          icon: <SyncIcon color="inherit" />,
+          featureId: 'integration-sync',
+          route: null,
+        },
+      ],
+    },
+    {
+      key: 'reportsAnalytics',
+      label: t('navigation:reportsAnalytics'),
+      icon: <AssessmentIcon />,
+      items: [
+        {
+          label: t('navigation:salesReports'),
+          icon: <TrendingUpIcon color="inherit" />,
+          featureId: 'sales-reports',
+          route: null,
+        },
+        {
+          label: t('navigation:fixedOpsReports'),
+          icon: <BuildCircleIcon color="inherit" />,
+          featureId: 'fixed-ops-reports',
+          route: null,
+        },
+        {
+          label: t('navigation:rentalUtilization'),
+          icon: <ShowChartIcon color="inherit" />,
+          featureId: 'rental-utilization',
+          route: null,
+        },
+        {
+          label: t('navigation:financialStatements'),
+          icon: <SummarizeIcon color="inherit" />,
+          featureId: 'financial-statements',
+          route: null,
+        },
       ],
     },
     {
@@ -238,6 +532,12 @@ export function Layout() {
           icon: <AddLocationAltIcon color="inherit" />,
           featureId: 'locations',
           route: '/locations',
+        },
+        {
+          label: t('navigation:users'),
+          icon: <BadgeIcon color="inherit" />,
+          featureId: 'users',
+          route: null,
         },
         {
           label: t('navigation:systemConfig'),

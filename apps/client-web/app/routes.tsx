@@ -12,7 +12,10 @@ export default [
       index('./app.tsx'),
 
       // Parts
-      ...prefix('parts', [index('./pages/parts/PartList.tsx')]),
+      ...prefix('parts', [
+        index('./pages/parts/PartList.tsx'),
+        route(':partNumber', './pages/parts/PartDetail.tsx'),
+      ]),
 
       // Admin
       route('locations', './pages/locations/LocationList.tsx'),
