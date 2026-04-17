@@ -2,25 +2,31 @@
 
 ## Prerequisites
 
-- Node.js 20+ (install it using Node Version Manager (`nvm` or `nvm-windows`))
-- Docker Desktop (running)
+- NodeJS v22.x (install it using Node Version Manager (`nvm` or `nvm-windows`), not the downloader installer from nodejs.org)
+- Docker Desktop (have it already running)
 
 ## Setup
 
-**Terminal 1** — run once to initialise everything:
+**Create your `.env` file**
+
+The project needs a `.env` file for Docker and app configuration.
+In VS Code's Explorer panel, right-click `.env.example` → **Copy**, then right-click the
+same folder → **Paste**, and rename the copy to `.env`. (No changes to the values are needed.)
+
+**In VSCode, create Terminal 1** — run once to initialise everything:
 ```bash
-npm install
+npm install                             # don't worry about `npm warn` or `deprecated` messages
 npm run docker -- up                    # start Logto, PostgreSQL, RavenDB, Mailpit
 npm run logto -- logto:db:import-init   # load Logto config (stops/restarts Logto automatically)
 npm run logto -- logto:seed             # seed test users & organisations
 ```
 
-**Terminal 2** — start the dev servers and leave them running:
+**Create Terminal 2** — start the dev servers and leave them running:
 ```bash
 npm run dev:apis                       # start API (port 3000)
 ```
 
-**Terminal 1** — once the API is ready (you'll see `Application is running on: http://localhost:3000`):
+**Returning to Terminal 1** — once the API is ready (you'll see `Application is running on: http://localhost:3000`):
 ```bash
 npm run db -- seed                      # create RavenDB database + seed reference data
 npm run dev:web                         # start Web UI (port 3004)
